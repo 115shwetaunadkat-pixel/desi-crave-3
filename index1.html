@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Desi Crave | Order Now</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#fff5ec;
+}
+header{
+    background:#b11226;
+    color:white;
+    padding:15px;
+    display:flex;
+    align-items:center;
+}
+header img{
+    width:50px;
+    height:50px;
+    margin-right:12px;
+}
+section{
+    padding:20px;
+}
+.product{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+.product img{
+    width:100%;
+    max-width:280px;
+    display:block;
+    margin:10px auto;
+    border-radius:15px;
+}
+label{
+    display:block;
+    margin-top:10px;
+}
+select,input,textarea{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+}
+button{
+    background:#b11226;
+    color:white;
+    border:none;
+    padding:12px;
+    width:100%;
+    border-radius:25px;
+    margin-top:15px;
+    font-size:16px;
+}
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <!-- LOGO -->
+    <img src="logo.jpg" alt="Desi Crave Logo">
+    <h2>Desi Crave</h2>
+</header>
+
+<section>
+
+<div class="product">
+    <h3>Glitter Sev</h3>
+    <img src="glitter-sev.jpg" alt="Glitter Sev">
+
+    <label>Select Quantity</label>
+    <select id="sev">
+        <option>100 gm – ₹100</option>
+        <option>500 gm – ₹200</option>
+        <option>1 kg – ₹300</option>
+    </select>
+</div>
+
+<div class="product">
+    <h3>Rainbow Chakli</h3>
+    <img src="rainbow-chakli.jpg" alt="Rainbow Chakli">
+
+    <label>Select Quantity</label>
+    <select id="chakli">
+        <option>100 gm – ₹150</option>
+        <option>500 gm – ₹250</option>
+        <option>1 kg – ₹400</option>
+    </select>
+</div>
+
+<div class="product">
+    <h3>Checkout Details</h3>
+
+    <label>Name</label>
+    <input type="text" id="name">
+
+    <label>Mobile Number</label>
+    <input type="text" id="phone">
+
+    <label>Delivery Address</label>
+    <textarea id="address"></textarea>
+
+    <button onclick="placeOrder()">Place Order</button>
+</div>
+
+</section>
+
+<footer>
+© 2022 Desi Crave | Made with ❤️ in India
+</footer>
+
+<script>
+function placeOrder(){
+    localStorage.setItem("name",name.value);
+    localStorage.setItem("phone",phone.value);
+    localStorage.setItem("address",address.value);
+    localStorage.setItem("sev",sev.value);
+    localStorage.setItem("chakli",chakli.value);
+
+    window.location.href="thankyou.html";
+}
+</script>
+
+</body>
+</html>
